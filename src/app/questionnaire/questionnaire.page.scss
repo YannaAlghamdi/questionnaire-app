@@ -1,0 +1,54 @@
+ion-content {
+  --background: #504cff url("../../assets/images/sprinkles.png") no-repeat left
+    center;
+}
+
+* {
+  color: #fff;
+}
+
+ion-grid,
+ion-row {
+  height: 100%;
+}
+
+ion-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ion-item {
+  --background: transparent;
+  --border-color: transparent;
+  width: 100%;
+
+  ion-label {
+    white-space: pre-wrap;
+  }
+}
+
+.title ion-label {
+  font-family: "Poppins ExtraBold";
+  font-size: calc(2em + 1vw);
+}
+
+.description ion-label {
+  font-family: "Poppins Italic";
+}
+
+.row {
+  margin: 5vw;
+}
+
+ion-button {
+  --background: rgb(10, 10, 10);
+}
+
+//for mobile phone screens
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+  ion-content {
+    --background: #504cff url("../../assets/images/sprinkles.png") no-repeat
+      center center / cover !important;
+  }
+}
