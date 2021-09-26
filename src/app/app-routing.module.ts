@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'questionnaire',
-    loadChildren: () => import('./questionnaire/questionnaire.module').then( m => m.QuestionnairePageModule)
+    loadChildren: () => import('./pages/questionnaire/questionnaire.module').then( m => m.QuestionnairePageModule)
   },
 ];
 

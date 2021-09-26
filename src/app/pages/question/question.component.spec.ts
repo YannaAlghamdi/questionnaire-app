@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-import { Question } from '../models/question';
+import { Question } from '../../models/question';
 
 import { QuestionComponent } from './question.component';
 
