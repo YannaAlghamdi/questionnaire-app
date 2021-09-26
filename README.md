@@ -56,3 +56,11 @@ $ ionic serve
 ```
 
 - Browse thru localhost:8100 on your favorite browser. Enjoy! :)
+
+## Running Tests
+
+To run the tests, execute this command:
+
+```bash
+$ npm run test
+```
