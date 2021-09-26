@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
@@ -10,7 +11,10 @@ describe('QuestionnairePage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ QuestionnairePage ],
-      imports: [IonicModule.forRoot()]
+      imports: [
+        IonicModule.forRoot(),
+        HttpClientTestingModule
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(QuestionnairePage);
@@ -20,5 +24,14 @@ describe('QuestionnairePage', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('when a question is submitted, it should scroll to the next component', () => {
+    spyOn(component, 'scrollToLabel');
+
+    component.submitted(1);
+
+    expect(component.scrollToLabel).toHaveBeenCalled();
+
   });
 });
