@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent } from '@ionic/angular';
 import { Observable } from 'rxjs';
-import { Questionnaire } from '../models/questionnaire';
-import { QuestionService } from '../services/question.service';
+import { Questionnaire } from '../../models/questionnaire';
+import { QuestionService } from '../../services/question.service';
 
 @Component({
   selector: 'app-questionnaire',

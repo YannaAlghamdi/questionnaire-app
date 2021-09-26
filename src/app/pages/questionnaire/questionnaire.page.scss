@@ -1,6 +1,6 @@
 ion-content {
-  --background: #504cff url("../../assets/images/sprinkles.png") no-repeat left
-    center;
+  --background: #504cff url("../../../assets/images/sprinkles.png") no-repeat
+    left center;
 }
 
 * {
@@ -53,7 +53,7 @@ ion-button {
 //for mobile phone screens
 @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
   ion-content {
-    --background: #504cff url("../../assets/images/sprinkles.png") no-repeat
+    --background: #504cff url("../../../assets/images/sprinkles.png") no-repeat
       center center / cover !important;
   }
 }
