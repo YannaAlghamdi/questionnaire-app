@@ -24,7 +24,9 @@ export class QuestionnairePage implements OnInit {
 
   scrollToLabel(id: string) {  //scrolls to the element
     const element = document.getElementById(id);
-    this.content.scrollToPoint(0, element.offsetTop, 1000);
+    setTimeout(() => {
+      this.content.scrollToPoint(0, element.offsetTop, 1000);
+    }, 500);
   }
 
   submitted(event: any) {

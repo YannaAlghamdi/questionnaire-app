@@ -23,11 +23,11 @@
     </ion-row>
     <ion-row class="row ion-padding" *ngFor="let question of questionnaire?.getQuestions(); let i = index;" [id]=i>
       <ion-col>
-
+        <app-question (submitted)="submitted($event)" [index]=i [question]="question"></app-question>
       </ion-col>
     </ion-row>
 
-    <ion-row class="row ion-padding" [id]=questionnaire?.getQuestions().length>
+    <ion-row class="row ion-padding end-content" [id]=questionnaire?.getQuestions().length>
       <ion-col>
         Thank you!
       </ion-col>

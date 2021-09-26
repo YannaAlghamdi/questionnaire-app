@@ -1,0 +1,40 @@
+<ion-item lines="none" >
+  <ion-icon (click)="goTo(index-1)" class="back-icon" slot="start" name="arrow-back"></ion-icon>
+</ion-item>
+<form [formGroup]="form">
+  <ion-item lines="none" >
+    <ion-label class="question ion-text-left">
+      {{question?.getHeadline()}} <span class="optional">{{!question?.getRequired() ?  ' - Optional': ''}}</span>
+    </ion-label>
+  </ion-item>
+  <ion-item *ngIf="question?.getDescription()" lines="none">
+    <ion-label class="description ion-no-margin ion-text-left">
+      {{question?.getDescription()}}
+    </ion-label>
+  </ion-item>
+  <ion-list *ngIf="question.getQuestionType() === 'multiple-choice' && !question?.getMultiple()">
+    <ion-radio-group formControlName="answer" (click)="goTo(index+1)">
+      <ion-item lines="none" *ngFor="let choice of question?.getChoices()">
+        <ion-label class="choices">{{choice.getLabel()}}</ion-label>
+        <ion-radio color="light" mode="md" slot="start" [value]=choice.getValue()></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-list *ngIf="question?.getQuestionType() === 'multiple-choice' && question?.getMultiple()">
+    <ion-radio-group formControlName="answer" *ngFor="let choice of question?.getChoices()">
+      <ion-item lines="none" >
+        <ion-label class="choices">{{choice.getLabel()}}</ion-label>
+        <ion-radio color="light" mode="md" slot="start" [value]=choice.getValue()></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-item class="text" *ngIf="question?.getQuestionType() === 'text'">
+    <ion-input formControlName="answer" *ngIf="question?.getQuestionType() === 'text'"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-button class="submit-btn" size="default" (click)="goTo(index+1)" [disabled]="!form.valid">
+      OK  <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
+  </ion-item>
+</form>
+

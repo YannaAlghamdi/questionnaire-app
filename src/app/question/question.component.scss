@@ -1,0 +1,51 @@
+ion-item,
+ion-list {
+  --background: transparent;
+  background: transparent;
+  color: #fff;
+}
+
+.question {
+  font-family: "Poppins Bold";
+  font-size: calc(1em + 1vw);
+  white-space: pre-wrap;
+  text-indent: -0.3rem;
+}
+
+.description {
+  font-family: "Poppins Regular";
+  white-space: pre-wrap;
+}
+
+.choices {
+  font-family: "Poppins Regular";
+  white-space: pre-wrap;
+}
+
+.optional {
+  font-family: "Poppins Thin";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+ion-item {
+  --color-focused: #fff !important;
+  --color-hover: #fff !important;
+}
+
+.submit-btn {
+  --background: rgb(10, 10, 10);
+}
+
+.back-icon {
+  color: #fff;
+  cursor: pointer;
+}
+
+.text {
+  --border-color: #fff;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  --highlight-background: transparent;
+}
