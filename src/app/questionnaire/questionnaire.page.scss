@@ -45,6 +45,11 @@ ion-button {
   --background: rgb(10, 10, 10);
 }
 
+.end-content {
+  font-family: "Poppins Bold";
+  font-size: calc(2em + 1vw);
+}
+
 //for mobile phone screens
 @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
   ion-content {
